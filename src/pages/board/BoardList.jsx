@@ -22,7 +22,7 @@ function BoardList() {
       axios.get("/posts", {
         params: {
           page: searchParams.get("page"),
-          limit: 3,
+          limit: import.meta.env.VITE_POST_LIMIT,
           keyword: searchParams.get("keyword"),
         },
       }),

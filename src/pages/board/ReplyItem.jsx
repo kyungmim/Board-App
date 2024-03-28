@@ -10,7 +10,7 @@ function ReplyItem({ item }) {
       <div className="flex justify-between items-center mb-2">
         <img
           className="w-8 mr-2 rounded-full"
-          src={`https://market-lion.koyeb.app/api/files/${item.user.profile}`}
+          src={`${import.meta.env.VITE_API_SERVER}/files/${item.user.profile}`}
           alt="프로필"
         />
         <a className="text-blue-500" href="">

@@ -1,11 +1,11 @@
 import { RouterProvider } from "react-router-dom";
 import router from "@/routes";
-import { RecoilRoot } from "recoil";
 import useThemeStore from "@zustand/themeStore.mjs";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "react-csspin/dist/style.css";
 import { Suspense } from "react";
+import { RecoilRoot } from "recoil";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ReactCsspin } from "react-csspin";
 
 // react-query 사용

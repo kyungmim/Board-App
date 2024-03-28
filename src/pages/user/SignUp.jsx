@@ -1,7 +1,7 @@
-import { useForm } from "react-hook-form";
 import useCustomAxios from "@hooks/useCustomAxios.mjs";
 import { useNavigate } from "react-router-dom";
 import Submit from "@components/Submit";
+import { useForm } from "react-hook-form";
 
 function Signup() {
   const axios = useCustomAxios();
@@ -16,6 +16,7 @@ function Signup() {
   const onSubmit = async (formData) => {
     try {
       formData.type = "user";
+
       console.log(formData);
 
       // 이미지 먼저 업로드
@@ -39,7 +40,7 @@ function Signup() {
         // profileImage 속성을 제거
         delete formData.profileImage;
       }
-      console.log(formData);
+
       const res = await axios.post("/users", formData);
       alert(
         res.data.item.name +
@@ -121,7 +122,6 @@ function Signup() {
               </p>
             )}
           </div>
-
           <div className="mb-4">
             <label
               className="block text-gray-700 dark:text-gray-200 font-bold mb-2"
@@ -150,13 +150,14 @@ function Signup() {
               className="block text-gray-700 dark:text-gray-200 font-bold mb-2"
               htmlFor="profileImage"
             >
-              이미지
+              프로필 이미지
             </label>
             <input
               type="file"
+              accept="image/*"
               id="profileImage"
               placeholder="이미지를 선택하세요"
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500 dark:bg-gray-700"
+              className="w-full px-3 py-2 border rounded-lg dark:bg-gray-700"
               {...register("profileImage")}
             />
           </div>
