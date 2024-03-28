@@ -16,12 +16,7 @@ function Login() {
     handleSubmit,
     formState: { errors },
     setError,
-  } = useForm({
-    values: {
-      email: "aa@bb.cc",
-      password: "********",
-    },
-  });
+  } = useForm();
 
   const onSubmit = async (formData) => {
     try {
