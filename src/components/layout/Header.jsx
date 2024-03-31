@@ -46,7 +46,7 @@ function Header() {
             <p className="flex items-center">
               <img
                 className="w-8 rounded-full mr-2"
-                src={`${import.meta.env.VITE_API_SERVER}/files/${user.profile}`}
+                src={`https://market-lion.koyeb.app/api/files/${user.profile}`}
               />
               {user.name}님 :)
               <Button size="sm" onClick={handleLogout}>

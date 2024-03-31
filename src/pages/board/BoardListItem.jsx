@@ -18,7 +18,10 @@ function BoardListItem({ item }) {
         {item.title}
       </td>
       <td className="p-2 truncate">{item.user.name}</td>
-      <td className="p-2 text-center hidden sm:table-cell">{item.viewCount}</td>
+      <td className="p-2 text-center">{item.views}</td>
+      <td className="p-2 text-center hidden sm:table-cell">
+        {item.repliesCount}
+      </td>
       <td className="p-2 truncate text-center hidden sm:table-cell">
         {item.updatedAt}
       </td>

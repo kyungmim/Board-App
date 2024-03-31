@@ -14,9 +14,10 @@ function ReplyItem({ item }) {
           alt="프로필"
         />
         <a className="text-blue-500" href="">
+          {item._id}
           {item.user.name}
         </a>
-        <time className="text-gray-500" dateTime={item.createdAt}>
+        <time className="ml-auto text-gray-500" dateTime={item.createdAt}>
           {item.createdAt}
         </time>
       </div>
